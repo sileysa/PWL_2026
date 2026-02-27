@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WelcomeController;
 
-Route::get('/user/{name?}', function ($name='John') {
-    return 'Sileysa Faedatul Nuraini '. $name;
-});
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
